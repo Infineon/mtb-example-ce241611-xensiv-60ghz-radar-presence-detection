@@ -48,8 +48,8 @@
 __NO_RETURN void console_task(void *pvParameters);
 
 #define BOARD_INFO                     ("[BOARD_INFO]")
-#define BOARD_INFO_APPLICATION         ("[BOARD_INFO] application PSoC 6 MCU : Human presence detection")
-#define BOARD_INFO_FIRMWARE            ("[BOARD_INFO] firmware 2.2.0")
+#define BOARD_INFO_APPLICATION         ("[BOARD_INFO] application PSoC 6 MCU : XENSIV™ 60 GHz radar presence detection")
+#define BOARD_INFO_FIRMWARE            ("[BOARD_INFO] firmware 1.1.0")
 #define BOARD_INFO_DEVICE_NAME         ("[BOARD_INFO] device_name CYSBSYSKIT-DEV-01")
 #define BOARD_INFO_DEVICE_VERSION      ("[BOARD_INFO] device_version 1.0.0")
 

@@ -698,9 +698,7 @@ static int32_t init_leds(void)
 void process_verbose_cmd(xensiv_radar_presence_handle_t handle,
         XENSIV_RADAR_PRESENCE_TIMESTAMP time_ms)
 {
-    float32_t energy = 0;
-    int range_bin = 0;
-
+  
     if (ce_app_state.verbose == false)
     {
         return;
@@ -738,24 +736,6 @@ void process_verbose_cmd(xensiv_radar_presence_handle_t handle,
                 break;
         }
 
-        const cfloat32_t *macro_fft_buff = xensiv_radar_presence_get_macro_fft_buffer(handle);
-
-        printf("[MACRO_FFT] %lu",(unsigned long)time_ms);
-
-        for(int i = 0; i< MACRO_FFT_BUFF_SIZE; i++)
-        {
-            float zero[2] = { 0.f, 0.f};
-
-            printf("%lf ", arm_euclidean_distance_f32((float*)&macro_fft_buff[i], zero, 2));
-        }
-
-        printf("\n");
-
-        xensiv_radar_presence_get_max_macro(handle, &energy, &range_bin);
-        printf("[MACRO] %d %lf %lu\n", range_bin, energy, (unsigned long)time_ms);
-
-        xensiv_radar_presence_get_max_micro(handle, &energy, &range_bin);
-        printf("[MICRO] %d %lf %lu\n", range_bin, energy, (unsigned long) time_ms);
 
         ce_app_state.bookmark_timestamp = time_ms;
 

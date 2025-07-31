@@ -8,12 +8,12 @@ The code example demonstrates how the presence detection application can benefit
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-ce241611-xensiv-60ghz-radar-presence-detection)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDE2MTEiLCJTcGVjIE51bWJlciI6IjAwMi00MTYxMSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IDYgTUNVOiBYRU5TSVYmdHJhZGU7IDYwIEdIeiByYWRhciBwcmVzZW5jZSBkZXRlY3Rpb24iLCJyaWQiOiJ1c21hbm11aCIsIkRvYyB2ZXJzaW9uIjoiMS4wLjAiLCJEb2MgTGFuZ3VhZ2UiOiJFbmdsaXNoIiwiRG9jIERpdmlzaW9uIjoiTUNEIiwiRG9jIEJVIjoiU0JTWVMiLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDE2MTEiLCJTcGVjIE51bWJlciI6IjAwMi00MTYxMSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IDYgTUNVOiBYRU5TSVYmdHJhZGU7IDYwIEdIeiByYWRhciBwcmVzZW5jZSBkZXRlY3Rpb24iLCJyaWQiOiJ1c21hbm11aCIsIkRvYyB2ZXJzaW9uIjoiMS4xLjAiLCJEb2MgTGFuZ3VhZ2UiOiJFbmdsaXNoIiwiRG9jIERpdmlzaW9uIjoiTUNEIiwiRG9jIEJVIjoiU0JTWVMiLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.4 
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.5 or later (tested with v3.5)
 - Board support package (BSP) minimum required version: 4.0.0
 - Programming language: C
 - Associated parts: All [PSOC&trade; 6 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-6-32-bit-arm-cortex-m4-mcu) parts
@@ -21,7 +21,7 @@ The code example demonstrates how the presence detection application can benefit
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
-- GNU Arm&reg; Embedded Compiler v10.3.1 (`GCC_ARM`) – Default value of `TOOLCHAIN`
+- GNU Arm&reg; Embedded Compiler v11.3.1(`GCC_ARM`) – Default value of `TOOLCHAIN`
 - Arm&reg; Compiler v6.22 (`ARM`)
 - IAR C/C++ Compiler v9.50.2 (`IAR`)
 
@@ -36,7 +36,7 @@ The code example demonstrates how the presence detection application can benefit
 
 ## Hardware setup
 
-### XENSIV&trade; BGT60TR13C Connected Sensor Kit
+**XENSIV&trade; BGT60TR13C Connected Sensor Kit**
 
 The XENSIV&trade; [KIT_CSK_BGT60TR13C](https://www.infineon.com/cms/en/product/evaluation-boards/kit_csk_bgt60tr13c/) is a comprehensive development kit consisting of:
 - Rapid IoT Connect Developer Kit `CYSBSYSKIT-DEV-01`
@@ -48,7 +48,7 @@ The XENSIV&trade; [KIT_CSK_BGT60TR13C](https://www.infineon.com/cms/en/product/e
 
    <br>
 
-To set up the kit, follow these steps:
+To set up the kit:
 
 1. Ensure that `EVAL_BGT60TR13C_WING` is mounted on the top of the `CYSBSYSKIT-DEV-01` kit through the pin headers
 
@@ -57,7 +57,7 @@ To set up the kit, follow these steps:
 3. For optimal performance of the presence detection application, place the `KIT_CSK_BGT60TR13C` kit at a fixed location, such as the corner of a room
 
 
-### XENSIV&trade; BGT60UTR11AIP Connected Sensor Kit
+**XENSIV&trade; BGT60UTR11AIP Connected Sensor Kit**
 
 The XENSIV&trade; [KIT_CSK_BGT60UTR11AIP](https://www.infineon.com/cms/en/product/evaluation-boards/kit_csk_bgt60utr11aip/) is a comprehensive development kit consisting of:
 - Rapid IoT Connect Developer Kit `CYSBSYSKIT-DEV-01`
@@ -69,7 +69,7 @@ The XENSIV&trade; [KIT_CSK_BGT60UTR11AIP](https://www.infineon.com/cms/en/produc
 
    <br>
 
-To set up the kit, follow these steps:
+To set up the kit:
 
 1. Ensure that `EVAL_60UTR11AIP_WING` is mounted on the top of the `CYSBSYSKIT-DEV-01` kit through the pin headers
 
@@ -78,7 +78,7 @@ To set up the kit, follow these steps:
 3. For optimal performance of the presence detection application, place the `KIT_CSK_BGT60UTR11AIP` kit at a fixed location, such as the corner of a room
 
 
-### XENSIV&trade; BGT60TR13C Embedded Kit
+**XENSIV&trade; BGT60TR13C Embedded Kit**
 
 **Figure 3. KIT-BGT60TR13C-EMBEDD kit**
 
@@ -91,7 +91,7 @@ To set up the kit, follow these steps:
 2. For optimal performance of the presence detection application, place the `KIT-BGT60TR13C-EMBEDD` kit at a fixed location, such as the corner of a room
 
 
-### PSOC&trade; 6 AI Evaluation Kit
+**PSOC&trade; 6 AI Evaluation Kit**
 
    **Figure 4. CY8CKIT-062S2-AI kit**
 
@@ -153,10 +153,10 @@ The 'project-creator-cli' tool can be used to create applications from a CLI ter
 
 Use a CLI terminal to invoke the 'project-creator-cli' tool. On Windows, use the command-line 'modus-shell' program provided in the ModusToolbox&trade; installation instead of a standard Windows command-line application. This shell provides access to all ModusToolbox&trade; tools. You can access it by typing "modus-shell" in the search box in the Windows menu. In Linux and macOS, you can use any terminal application.
 
-The following example clones the "[Human presence detection](https://github.com/Infineon/mtb-example-ce241611-xensiv-60ghz-radar-presence-detection)" application with the desired name "HumanPresenceDetection" configured for the *CYSBSYSKIT-DEV-01* BSP into the specified working directory, *C:/mtb_projects*:
+The following example clones the "[XENSIV&trade; 60GHz Radar Presence Detection](https://github.com/Infineon/mtb-example-ce241611-xensiv-60ghz-radar-presence-detection)" application with the desired name "XENSIV 60GHz Radar Presence Detection" configured for the *CYSBSYSKIT-DEV-01* BSP into the specified working directory, *C:/mtb_projects*:
 
    ```
-   project-creator-cli --board-id CYSBSYSKIT-DEV-01 --app-id mtb-example-ce241611-xensiv-60ghz-radar-presence-detection --user-app-name HumanPresenceDetection --target-dir "C:/mtb_projects"
+   project-creator-cli --board-id CYSBSYSKIT-DEV-01 --app-id mtb-example-ce241611-xensiv-60ghz-radar-presence-detection --user-app-name XENSIV 60GHz Radar Presence Detection--target-dir "C:/mtb_projects"
    ```
 
 The 'project-creator-cli' tool has the following arguments:
@@ -528,6 +528,9 @@ You can configure the application parameters using the options provided on the t
    set_bandpass_filter | disable | enable/disable
    set_decimation_filter | disable | enable/disable
    set_mode | micro_if_macro | macro_only/micro_only/micro_if_macro/micro_and_macro
+   verbose  | disable | Enable detailed status to be updated for every second 
+   board_info | – | Board information
+   config | – | Solution configuration information
 
    <br>
 
@@ -537,7 +540,10 @@ You can configure the application parameters using the options provided on the t
 
    - **Macro motions:** Detecting major movements into or through the field of view (motion detection)
 
-   > **Note:** Macro and micro threshold parameters can be adjusted to achieve different levels of sensitivity. The following table summarizes three different levels. For example, high sensitivity means that the solution is more sensitive to smaller movements. You can set any threshold values based on your use case requirement
+   > **Note 1:** Macro and micro threshold parameters can be adjusted to achieve different levels of sensitivity. The following table summarizes three different levels. For example, high sensitivity means that the solution is more sensitive to smaller movements. You can set any threshold values based on your use case requirement
+
+   > **Note 2:** If you want to see the data to be printed continuously in the serial terminal, enable the verbose
+
 
    **Table 7. Sensitivity levels with corresponding threshold setting**
 
@@ -744,6 +750,8 @@ Document title: *CE241611* – *PSOC&trade; 6 MCU: XENSIV&trade; 60 GHz radar pr
  Version | Description of change
  ------- | ---------------------
  1.0.0   | New code example
+ 1.1.0   | Changes in readme and support for MTB 3.5
+
 <br>
 
 
